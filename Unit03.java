@@ -26,16 +26,26 @@ public class Unit03{
     public static String shiftRight(String s, int k)    {
         return "";
     }
-    public static int countWords(String s)    {
-        return -1;
+    public static int countWords(String s)    { // אייזנמן
+        int lengthBfr = s.length();
+        int lengthAftr = s.replaceAll(" ", "").length();
+        int sentenceLength = lengthBfr - lengthAftr +1;
+        if(s.isEmpty())
+            return 0;
+        return sentenceLength;
     }
-    public static int countParts(String s, char separator)    {
-        return -1;
+    public static int countParts(String s, char separator)    { // אייזנמן
+        int lengthBfr = s.length();
+        int lengthAftr = s.replaceAll("" + separator, "").length();
+        int sentenceLength = lengthBfr - lengthAftr +1;
+        if(s.isEmpty())
+            return 0;
+        return sentenceLength;
     }
-    public static String getParts(String s, char separator)    {
-        return "";
-    }
-    public static void printParts(String s, char separator)    {
+    public static String getParts(String s, char separator)    { // אייזנמן
+        return s; 
+    } 
+    public static void printParts(String s, char separator)    { // אייזנמן
         int lengthBfr = s.length();
         int lengthAftr = s.replaceAll("" + separator, "").length();
         int sentenceLength = lengthBfr - lengthAftr +1;
