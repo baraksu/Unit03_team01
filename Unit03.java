@@ -35,7 +35,12 @@ public class Unit03{
         return "";
     }
     public static void printParts(String s, char separator)    {
+        String firstWord = s.substring(0, firstIndexOf(seperator));
+        String secondWord = s.substring(firstIndexOf(seperator + 1), lastIndexOf(seperator));
+        String lastWord = s.substring(lastIndexOf(seperator) +1)
+        return firstWord + "\n" + secondWord + "\n" + lastWord;
+    }
+    public static void main (String[] args){
         
-    } 
     
 }
