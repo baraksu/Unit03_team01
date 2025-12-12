@@ -1,3 +1,4 @@
+import java.util.*;
 public class Unit03{
     
     public static int shiftRight(int num)    {
@@ -35,12 +36,23 @@ public class Unit03{
         return "";
     }
     public static void printParts(String s, char separator)    {
-        String firstWord = s.substring(0, firstIndexOf(seperator));
-        String secondWord = s.substring(firstIndexOf(seperator + 1), lastIndexOf(seperator));
-        String lastWord = s.substring(lastIndexOf(seperator) +1)
-        return firstWord + "\n" + secondWord + "\n" + lastWord;
+        int lengthBfr = s.length();
+        int lengthAftr = s.replaceAll("" + separator, "").length();
+        int sentenceLength = lengthBfr - lengthAftr +1;
+        if (sentenceLength == 3){
+            String firstWord = s.substring(0, s.indexOf(separator));
+            String secondWord = s.substring(s.indexOf(separator), s.lastIndexOf(separator));
+            String lastWord = s.substring(s.lastIndexOf(separator) +1); 
+            System.out.println(firstWord + "\n" + secondWord + "\n" + lastWord); 
+        }
+        else if (sentenceLength == 2){
+            String firstWord = s.substring(0, s.indexOf(separator));
+            String lastWord = s.substring(s.indexOf(separator) + 1);
+            System.out.println(firstWord + "\n" + lastWord);
+        }
+        else if (sentenceLength == 1){
+            String word = s.substring(0, s.length() -1);
+            System.out.println(word);
+        } 
     }
-    public static void main (String[] args){
-        
-    
 }
