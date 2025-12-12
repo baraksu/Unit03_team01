@@ -41,9 +41,9 @@ public class Unit03{
         int sentenceLength = lengthBfr - lengthAftr +1;
         if (sentenceLength == 3){
             String firstWord = s.substring(0, s.indexOf(separator));
-            String secondWord = s.substring(s.indexOf(separator), s.lastIndexOf(separator));
+            String secondWord = s.substring(s.indexOf(separator) +1, s.lastIndexOf(separator));
             String lastWord = s.substring(s.lastIndexOf(separator) +1); 
-            System.out.println(firstWord + "\n" + secondWord + "\n" + lastWord); 
+            System.out.println(firstWord+"\n"+secondWord+"\n"+lastWord); 
         }
         else if (sentenceLength == 2){
             String firstWord = s.substring(0, s.indexOf(separator));
@@ -51,7 +51,7 @@ public class Unit03{
             System.out.println(firstWord + "\n" + lastWord);
         }
         else if (sentenceLength == 1){
-            String word = s.substring(0, s.length() -1);
+            String word = s.substring(0, s.length());
             System.out.println(word);
         } 
     }
